@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi des Crises d'Angoisse et des Médicaments</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 1200px; /* Increased max width to accommodate side-by-side layout */
+        }
+        .form-container, .table-container {
+            padding: 15px;
+        }
+        .form-container {
+            border-right: 1px solid #ddd; /* Border to visually separate forms */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Suivi des Crises d'Angoisse et des Médicaments</h1>
+
+        <div class="row">
+            <!-- Forms Column -->
+            <div class="col-md-6 form-container">
+                <div class="section">
+                    <h2>Enregistrer une Crise d'Angoisse</h2>
+                    <form id="criseForm">
+                        <div class="form-group">
+                            <label for="criseDate">Date et Heure :</label>
+                            <input type="datetime-local" class="form-control" id="criseDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="criseNote">Note :</label>
+                            <textarea id="criseNote" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+
+                <div class="section">
+                    <h2>Enregistrer la Prise de Médicaments</h2>
+                    <form id="medicamentForm">
+                        <div class="form-group">
+                            <label for="medicamentDate">Date et Heure :</label>
+                            <input type="datetime-local" class="form-control" id="medicamentDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="medicamentName">Nom du Médicament :</label>
+                            <select id="medicamentName" class="form-control" required>
+                                <option value="">Sélectionnez un médicament</option>
+                                <option value="Alprazolam 0.25mg">Alprazolam 0.25mg</option>
+                                <option value="Clozapine 25mg">Clozapine 25mg</option>
+                                <option value="Clozapine 100mg">Clozapine 100mg</option>
+                                <option value="Loxapac 50mg">Loxapac 50mg</option>
+                                <option value="Olanzapine 5mg">Olanzapine 5mg</option>
+                                <option value="Olanzapine 10mg">Olanzapine 10mg</option>
+                                <option value="Prazepam 20mg">Prazepam 20mg</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tables Column -->
+            <div class="col-md-6 table-container">
+                <div class="section">
+                    <h2>Historique des Crises d'Angoisse</h2>
+                    <table class="table table-bordered" id="criseTable">
+                        <thead>
+                            <tr>
+                                <th>Date et Heure</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Les enregistrements seront ajoutés ici -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2>Historique des Prises de Médicaments</h2>
+                    <table class="table table-bordered" id="medicamentTable">
+                        <thead>
+                            <tr>
+                                <th>Date et Heure</th>
+                                <th>Nom du Médicament</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Les enregistrements seront ajoutés ici -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
