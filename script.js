@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <td>${medicamentData.date}</td>
             <td>${medicamentData.name}</td>
             <td>
-                <button class="edit-button" onclick="editMedicament(this)">Modifier</button>
+                <button class="update-button" onclick="editMedicament(this)">Modifier</button>
                 <button class="delete-button" onclick="deleteMedicament(this)">Supprimer</button>
             </td>
         `;
