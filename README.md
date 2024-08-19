@@ -1,1 +1,1 @@
-# Suivie des crises d'angoisse et de la prise de médicaments si besoin
+# Suivi des crises d'angoisse et de la prise de médicaments si besoin
